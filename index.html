@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#24775b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Focus Forward" />
+    <link rel="apple-touch-icon" href="assets/icon-180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta
+      name="description"
+      content="Your private daily companion for small steps, focus, movement, and career momentum."
+    />
+    <title>Focus Forward | Your next small win</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2324775b'/%3E%3Cpath d='M36 9 17 35h14l-3 20 20-28H34z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="assets/lucide.min.js" defer></script>
+    <script src="model.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="#today"
+          ><span class="brand-symbol" aria-hidden="true"
+            ><i data-lucide="zap"></i></span
+          ><span
+            >focus<span class="brand-light">forward</span
+            ><small>A LITTLE, EVERY DAY.</small></span
+          ></a
+        >
+        <div class="nav-caption">YOUR SPACE</div>
+        <nav id="navigation" aria-label="Main navigation"></nav>
+        <div class="sidebar-bottom">
+          <div id="level"></div>
+          <p class="privacy">
+            <i data-lucide="lock-keyhole" aria-hidden="true"></i> Your pace.
+            Your private space.
+          </p>
+          <button class="nav-item" data-view="settings">
+            <i data-lucide="settings-2" aria-hidden="true"></i> Settings &
+            backup
+          </button>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <span class="location"
+            >My space <span>/</span> <b id="view-label">Today</b></span
+          >
+          <div class="topbar-actions">
+            <button
+              id="active-timer"
+              class="live-timer"
+              data-view="focus"
+              hidden
+            ></button
+            ><span class="local-badge"><span></span> Local & private</span
+            ><button
+              class="icon-button"
+              data-view="reminders"
+              title="Reminders"
+              aria-label="Open reminders"
+            >
+              <i data-lucide="bell"></i></button
+            ><button
+              class="icon-button"
+              data-view="settings"
+              title="Settings and backup"
+              aria-label="Open settings and backup"
+            >
+              <i data-lucide="settings-2"></i></button
+            ><span class="avatar" aria-hidden="true">YOU</span>
+          </div>
+        </header>
+        <main id="main" tabindex="-1"></main>
+        <footer>
+          Small steps count. Rest counts, too.<span>FOCUS FORWARD</span>
+        </footer>
+      </div>
+    </div>
+    <dialog id="modal" aria-labelledby="modal-title"></dialog>
+    <div
+      id="toast-region"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <noscript
+      >This tracker needs JavaScript enabled. Your information stays in this
+      browser.</noscript
+    >
+  </body>
+</html>
